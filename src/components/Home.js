@@ -85,7 +85,7 @@ const Home = ({ viewportWidth }) => {
 
                 </div>
                 <div className="home-section explore">
-                <Link to="/destination">
+                <Link to="/space-tourism-website/destination">
                     <motion.div whileHover={{boxShadow: "0px 0px 4px white",textShadow: "0px 0px 4px black"}} className="explore-circle">
                         
                             <span>EXPLORE</span>

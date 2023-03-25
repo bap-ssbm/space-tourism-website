@@ -104,6 +104,7 @@ const Crew = ({ viewportWidth, crew }) => {
                     <div className="crew-section crew-desc-section">
                     < AnimatePresence mode='wait'>
                         {active === 0 && (<motion.div variants={descVariant}
+                        className="crew-name-desc-wrapper"
                             key={0}
                             initial="hidden"
                             animate="visible"
@@ -114,6 +115,7 @@ const Crew = ({ viewportWidth, crew }) => {
                             <p>{crew[0].bio}</p>
                         </motion.div>)}
                         {active === 1 && (<motion.div variants={descVariant}
+                        className="crew-name-desc-wrapper"
                              key={1}
                              initial="hidden"
                              animate="visible"
@@ -124,6 +126,7 @@ const Crew = ({ viewportWidth, crew }) => {
                             <p>{crew[1].bio}</p>
                         </motion.div>)}
                         {active === 2 && (<motion.div variants={descVariant}
+                        className="crew-name-desc-wrapper"
                              key={2}
                              initial="hidden"
                              animate="visible"
@@ -134,6 +137,7 @@ const Crew = ({ viewportWidth, crew }) => {
                             <p>{crew[2].bio}</p>
                         </motion.div>)}
                         {active === 3 && (<motion.div variants={descVariant}
+                        className="crew-name-desc-wrapper"
                              key={3}
                              initial="hidden"
                              animate="visible"
