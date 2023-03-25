@@ -1,0 +1,88 @@
+.destinations-wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width:1200px;
+    height: 500px;
+    align-self: center;
+    margin-top: 70px;
+}
+.destination{
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+}
+.dest-section{
+    flex-basis: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dest-nav{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.dest-nav-item{
+    margin-right: 30px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+hr{
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.259);
+}
+.dest-bottom-wrapper{
+    display: flex;
+    width: 100%;
+}
+.dest-bottom-wrapper-section{
+    width: 50%;
+}
+.dest-desc-wrapper-title{
+    height: 300px;
+}
+.dest-desc-wrapper-title>h1{
+    font-size: 100px;
+    font-family: "Marcell";
+    font-weight: 100;
+    margin: 0;
+}
+.dest-desc-wrapper-title>p{
+    line-height: 2;
+}
+.dest-desc-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+.planet-wrapper>img{
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+.dest-bottom-wrapper-section>h2{
+    font-family: "Marcell";
+    font-size: 30px;
+    font-weight: 100;
+}
+@media (max-width: 768px) {
+    .destinations-wrapper{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+    .destination{
+        padding: 50px;
+        padding-top: 0px;
+        text-align: center;
+    }
+    .dest-nav{
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
