@@ -46,7 +46,7 @@ hr{
 }
 .dest-desc-wrapper-title>h1{
     font-size: 100px;
-    font-family: "Marcell";
+    font-family: 'Bellefair', serif;
     font-weight: 100;
     margin: 0;
 }
@@ -65,7 +65,7 @@ hr{
     cursor: pointer;
 }
 .dest-bottom-wrapper-section>h2{
-    font-family: "Marcell";
+    font-family: 'Bellefair', serif;
     font-size: 30px;
     font-weight: 100;
 }

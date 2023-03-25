@@ -174,8 +174,8 @@ const Technology = ({ viewportWidth, technology }) => {
                                     animate="visible"
                                     exit="exit"
                                 >
-                                    <motion.h1 variants={techTxtVariant}>{technology[0].name.toUpperCase()}</motion.h1>
-                                    <motion.p variants={techTxtVariant}>{technology[0].description}</motion.p>
+                                    <motion.h1 variants={techTxtVariant}>{technology[1].name.toUpperCase()}</motion.h1>
+                                    <motion.p variants={techTxtVariant}>{technology[1].description}</motion.p>
                                 </motion.div>)}
                                 {active === 2 && (<motion.div className="desc-wrapper-tech"
                                     key={2}
