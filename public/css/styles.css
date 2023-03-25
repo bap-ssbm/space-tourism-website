@@ -1,0 +1,229 @@
+body {
+    min-width: fit-content;
+    margin: 0;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    body {
+        min-width: 0px;
+        min-height: 0px;
+        width: auto;
+    }
+
+    .main-wrapper {
+        min-width: 0px;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 580px) {
+   
+}
+
+.background-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.background-image>img{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.main-title{
+    font-weight: 100;
+    letter-spacing: 2px;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+}
+.main-title>span{
+    font-weight: 700;
+    margin-right: 20px;
+    color: rgb(148, 148, 148);
+}
+
+
+/*-------------------------------------navbar------------------------------------------*/
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.nav-line {
+    height: 1px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.274);
+    z-index: 1;
+    position: relative;
+    left: 50px;
+}
+.nav-underLine{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.number-title {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.692);
+    margin-right: 10px;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.83);
+    text-decoration: none;
+}
+
+
+
+.nav-items-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    height: 95px;
+    
+    background-color: rgb(var(--color) / 1);
+    backdrop-filter: url(filters.svg#filter) blur(50px) saturate(150%);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        margin-top: 0;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .nav-items-wrapper {
+        padding: 0px 25px;
+    }
+    .number-title {
+        display: none;
+    }
+}
+.nav-item-wrapper {
+    margin: 0px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    display: flex;
+}
+
+@media (max-width: 580px) {
+    .hamburger{
+        display: inline-block;
+        border: none;
+        background-color: #ffffff00;
+        padding: 0;
+        position: relative;
+        z-index: 20;
+    }
+    .nav-items-wrapper {
+        display: flex;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: end;
+        justify-content: start;
+        padding: 0;
+        padding: 20px;
+        padding-top: 150px;
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+        width: 70vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .hamburger-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    .nav-item-wrapper{
+        margin: 0;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+    .navbar{
+        margin-top: 20px;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(142, 142, 142);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.423);
+}

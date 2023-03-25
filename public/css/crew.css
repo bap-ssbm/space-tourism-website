@@ -1,0 +1,114 @@
+.crew{
+    padding-left: 150px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+.crew-wrapper{
+    display: flex;
+    flex-grow:1;
+    align-items: end;
+    max-width:1200px;
+    height: 500px;
+    align-self: center;
+}
+.crew-section{
+    width: 50%;
+}
+.crew-img>img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.crew-desc-section{
+    padding-bottom: 100px;
+}
+
+.crew-desc-section>div>h2{
+    font-family: "Marcell";
+    font-family: 100;
+    font-size: 35px;
+    font-weight: 100;
+    margin: 0;
+    
+    color: rgba(255, 255, 255, 0.483);
+}
+.crew-desc-section>div>h1{
+    font-family: "Marcell";
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0;
+}
+.crew-desc-section>div>p{
+    width: 80%;
+    font-weight: 100;
+    line-height: 2;
+}
+.crew-nav{
+    margin-top: 100px;
+}
+.crew-nav>button{
+    height: 15px;
+    width: 15px;
+    margin-right: 25px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.461);
+}
+@media (max-width: 768px) {
+    .crew{
+        padding:0px 50px;
+        text-align: center;
+    }
+    .crew-wrapper{
+        flex-direction: column;
+        height: auto;
+    }
+    .crew-section{
+        width: 100%;
+    
+    }
+    .crew-desc-section>div>p{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .crew-nav{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .crew-desc-section {
+        padding-bottom: 0px;
+    }
+    .crew-desc-section>div>h2{
+        margin: 25px 0px;
+        margin-bottom: 15px;
+        font-size: 25px;
+        
+    }
+    .crew-desc-section>div>h1{
+        font-size:40px;
+    }
+    .crew-img>img{
+        max-width: 400px;
+        max-height: 400px;  
+    }
+    .crew-img{
+        display: flex;
+        flex-grow: 1;
+        align-items: end;
+        justify-content: center;
+    }
+}
+
+@media (max-width:580px) {
+    .crew-img>img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
