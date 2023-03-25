@@ -93,28 +93,28 @@ const Navbar = ({ location, viewportWidth }) => {
                                 animate= {viewportWidth <= 580 && "visible"}
                                 exit={showHamMenu &&"exit"}
                             >
-                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/" && viewportWidth > 580) && "3px white solid" }}>
+                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/space-tourism-website" && viewportWidth > 580) && "3px white solid" }}>
                                     <motion.div
                                         variants={navMotion} whileHover="hover">
-                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/"><span className="number-title">00</span> HOME</Link>
+                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/space-tourism-website"><span className="number-title">00</span> HOME</Link>
                                     </motion.div>
                                 </div>
-                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/destination" && viewportWidth > 580) && "3px white solid" }}>
+                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/space-tourism-website/destination" && viewportWidth > 580) && "3px white solid" }}>
                                     <motion.div
                                         variants={navMotion} whileHover="hover">
-                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/destination"><span className="number-title">01</span> DESTINATION</Link>
+                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/space-tourism-website/destination"><span className="number-title">01</span> DESTINATION</Link>
                                     </motion.div>
                                 </div>
-                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/crew" && viewportWidth > 580) && "3px white solid" }}>
+                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/space-tourism-website/crew" && viewportWidth > 580) && "3px white solid" }}>
                                     <motion.div
                                         variants={navMotion} whileHover="hover">
-                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/crew"><span className="number-title">02</span> CREW</Link>
+                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/space-tourism-website/crew"><span className="number-title">02</span> CREW</Link>
                                     </motion.div>
                                 </div>
-                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/technology" && viewportWidth > 580) && "3px white solid" }}>
+                                <div className="nav-item-wrapper" style={{ borderBottom: (location === "/space-tourism-website/technology" && viewportWidth > 580) && "3px white solid" }}>
                                     <motion.div
                                         variants={navMotion} whileHover="hover">
-                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/technology"><span className="number-title">03</span> TECHNOLOGY</Link>
+                                        <Link onClick={() => { setShowHamMenu(false) }} className="nav-item" to="/space-tourism-website/technology"><span className="number-title">03</span> TECHNOLOGY</Link>
                                     </motion.div>
                                 </div>
                             </motion.div>

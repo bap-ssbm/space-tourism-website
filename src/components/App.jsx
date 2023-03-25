@@ -32,10 +32,10 @@ function App() {
       <Navbar viewportWidth = {viewportWidth} location={location.pathname} />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.key}>
-          <Route path="/" element={<Home  viewportWidth = {viewportWidth}/>} />
-          <Route path="/destination" element={<Destination  destinations ={ data.destinations } viewportWidth = {viewportWidth}/>} />
-          <Route path="/crew" element={<Crew crew={data.crew} viewportWidth = {viewportWidth}/>} />
-          <Route path="/technology" element={<Technology technology={data.technology} viewportWidth = {viewportWidth}/>} />
+          <Route path="/space-tourism-website" element={<Home  viewportWidth = {viewportWidth}/>} />
+          <Route path="/space-tourism-website/destination" element={<Destination  destinations ={ data.destinations } viewportWidth = {viewportWidth}/>} />
+          <Route path="/space-tourism-website/crew" element={<Crew crew={data.crew} viewportWidth = {viewportWidth}/>} />
+          <Route path="/space-tourism-website/technology" element={<Technology technology={data.technology} viewportWidth = {viewportWidth}/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </AnimatePresence>
