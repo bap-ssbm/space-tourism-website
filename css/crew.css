@@ -26,7 +26,7 @@
 }
 
 .crew-desc-section>div>h2{
-    font-family: "Marcell";
+    font-family: 'Bellefair', serif;
     font-family: 100;
     font-size: 35px;
     font-weight: 100;
@@ -35,7 +35,7 @@
     color: rgba(255, 255, 255, 0.483);
 }
 .crew-desc-section>div>h1{
-    font-family: "Marcell";
+    font-family: 'Bellefair', serif;
     font-size: 50px;
     font-weight: 100;
     margin: 0;
