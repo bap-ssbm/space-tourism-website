@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Frontend Mentor -space-tourism-website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Links
 
-In the project directory, you can run:
+- Solution URL: https://github.com/bap-ssbm/space-tourism-website
+- Live Site URL: https://bap-ssbm.github.io/space-tourism-website/
 
-### `npm start`
+## My process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Built with
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- framer-motion
+- react-routes
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### What I learned
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+first project with framer-motion, and react-routing so i learned alot about both. I learned that I have to add key values to each child element inside a AnimatePresence tag.
+I learned how to coniditionally run different animations. I also learned that you can't animate the exit of arrays, exit animations only animate once elements leave. Not when the inner html changes. 
+So you have to wrap each of them conditionally. Kind of makes the code alittle bit more complicated, but its worth the cool user experience.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```html/react
+const imgVariant = {
+    hidden: {
+        scale: 0,
+        opacity: 0,
+        x: -300
+    },
+    visible: {
+        scale: 1,
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1.8,
+            ease: "easeIn",
+            type: 'spring' // adjust this value as needed
+        }
+    },
+    exit: {
+        scale: 0,
+        opacity: 0,
+        x: 200,
+        transition: {
+            duration: 0.9,
+            ease: "easeInOut" // adjust this value as needed
+        }
+    }
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+         <div className="planet-wrapper dest-section">
+                        <AnimatePresence mode='wait'>
+                            {active == 0 && (<motion.img drag dragConstraints={{left:0, top:0, right:0, bottom:0 }} key={0} variants={imgVariant} initial="hidden" animate="visible" exit="exit" src={destinations[0].images.png} />)}
+                            {active == 1 && (<motion.img drag key={1} dragConstraints={{left:0, top:0, right:0, bottom:0 }} variants={imgVariant} initial="hidden" animate="visible" exit="exit" src={destinations[1].images.png} />)}
+                            {active == 2 && (<motion.img drag key={2} dragConstraints={{left:0, top:0, right:0, bottom:0 }} variants={imgVariant} initial="hidden" animate="visible" exit="exit" src={destinations[2].images.png} />)}
+                            {active == 3 && (<motion.img drag key={3} dragConstraints={{left:0, top:0, right:0, bottom:0 }} variants={imgVariant} initial="hidden" animate="visible" exit="exit" src={destinations[3].images.png} />)}
+                        </AnimatePresence>
+                    </div>
 
-### `npm run eject`
+        Im proud of this little snippet here from react, this is the page for destination, in the website. It rotates the planets in and out, in the carousel. I thought I made the animation look really cool
+```
+```css
+body {
+    min-width: fit-content;
+    margin: 0;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#root {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    im proud of the way i mixined in min-width and flex-grow to adjust the height and width of the body and #root, to make the webpage more dynamic with the viewport and make it look more clean.
+```
+```js
+const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  useEffect(() => {
+      function handleResize() {
+          setViewportWidth(window.innerWidth);
+      }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+      window.addEventListener('resize', handleResize);
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-## Learn More
+  const location = useLocation();
+  console.log(location.pathname)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+this wasnt really a js heavy project, but this viewport calculation function, helped with making the website more dynamic, and will continue to use this for more future websites that i make.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Continued development
+I want to learn more about route 
