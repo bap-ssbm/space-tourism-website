@@ -108,4 +108,8 @@ const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 this wasnt really a js heavy project, but this viewport calculation function, helped with making the website more dynamic, and will continue to use this for more future websites that i make.
 
 ### Continued development
+<<<<<<< HEAD
 I want to learn more about route 
+=======
+I want to learn more about route 
+>>>>>>> cee5c8104946fbdf461cbd141d0eef8dfd6baa59
